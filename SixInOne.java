@@ -79,7 +79,22 @@ public class SixInOne {
         }
     }
 
+    public static void fibonacci(int nums) {
+        int n1 = 0;
+        int n2 = 1;
+        int nextNumber;
+        System.out.print(n1);
+        System.out.print(n2);
+        for (int i = 2; i < nums; i++) {
+            nextNumber = n1 + n2;
+            System.out.print(nextNumber);
+            n1 = n2;
+            n2 = nextNumber;
+        }
+    }
+
     public static void main(String args[]) {
+        fibonacci(8);
         int b = 5;
         String str = "BiggBoss";
         int num[] = { 2, 4, 6 };
