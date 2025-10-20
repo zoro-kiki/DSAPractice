@@ -1,7 +1,7 @@
 import java.util.HashSet;
 
-public class practice {
-    public static boolean conDup(int a[]) {
+public class containsDup {
+    public static boolean dup(int a[]) {
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < a.length; i++) {
             if (set.contains(a[i])) {
@@ -14,7 +14,7 @@ public class practice {
     }
 
     public static void main(String args[]) {
-        int a[] = { 1, 2, 3, 4, 2, 7 };
-        System.out.println(conDup(a));
+        int a[] = { 1, 2, 3, 4 };
+        System.out.println(dup(a));
     }
 }
