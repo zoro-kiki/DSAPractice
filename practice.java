@@ -1,20 +1,25 @@
 import java.util.HashSet;
 
 public class practice {
-    public static boolean conDup(int a[]) {
-        HashSet<Integer> set = new HashSet<>();
+    public static boolean findKsubArr(int a[], int k) {
+        HashSet<Integer> mySet = new HashSet<>();
+        int sum = 0;
+        mySet.add(0);
         for (int i = 0; i < a.length; i++) {
-            if (set.contains(a[i])) {
+            sum = sum + a[i];
+            int rem = sum - k;
+            if (mySet.contains(rem)) {
                 return true;
             } else {
-                set.add(a[i]);
+                mySet.add(sum);
             }
         }
         return false;
     }
 
     public static void main(String args[]) {
-        int a[] = { 1, 2, 3, 4, 2, 7 };
-        System.out.println(conDup(a));
+        int a[] = { 2, 8, 6, -6, 3, 8, 2 };
+        int k = 5;
+        System.out.println(findKsubArr(a, k));
     }
 }
